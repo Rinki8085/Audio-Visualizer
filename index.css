@@ -1,0 +1,131 @@
+body{
+    padding:0;
+    margin:0;
+}
+
+.parent-div{
+    background-color: black;
+    color:white;
+}
+
+.child-div{
+    width:30%;
+    margin:auto;
+    background-color: #2f104b;
+    height:100vh;
+    overflow:hidden;
+}
+
+.content-section{
+    padding:18px;
+}
+
+.icon{
+    width:30px;
+    height:30px;
+    color:whitesmoke;
+}
+
+.name{
+    text-transform: uppercase;
+    /* font-weight:500; */
+}
+
+.name>h4{
+    font-family: 'Open Sans', sans-serif;
+    margin-block-end: 0.33em;
+}
+
+.name>p{
+    font-family: 'Besley', serif;
+    font-weight:lighter;
+    margin-block-start: 0;
+}
+
+.discription{
+    padding-inline-start: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-size:0.7rem;
+    color:rgb(162, 156, 156);
+    margin-block-start: -5px;
+}
+
+.year{
+    padding-top:5px;
+    border:2px solid rgb(162, 156, 156);
+    text-align: center;
+    font-size:1.5rem;
+    width:90px;
+    height:30px;
+    border-radius:25px;
+    margin:40px 0px 20px 0px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.content>p:nth-child(1){
+    font-size: 2.26rem;
+    line-height: 2.2rem;
+    margin-block-end: 0.6em;
+    margin-block-start: 0.6em;
+}
+
+.content>p:nth-child(2){
+    margin-block-start: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.bullet-points{
+    font-size:0.8rem;
+    color:rgb(162, 156, 156);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.bullet-points>li{
+    margin-bottom:2px;
+}
+
+.music-jukebox{
+    margin-top:20px;
+}
+
+.visualizer{
+    height: 83px;
+}
+
+.play-button{
+    height:46px;
+    background-color: rgb(162, 156, 156);
+    /* opacity:0.3; */
+}
+
+.play-button>div{
+    width:60px;
+    height:100%;
+    margin:auto;
+}
+
+button{
+    background-color: transparent;
+    border:none;
+    outline:none;
+    text-align: center;
+    width:100%;
+    margin:auto;
+    height:auto;
+    margin-top:10px;
+}
+
+canvas{
+    margin-top:-110px;
+    width:100%;
+}
+
+input:not([type="range"]):not([type="color"]) {
+    writing-mode:unset !important;
+}
+
+/* ----- swiper css ----- */
+
+audio {
+    display:none;
+}
