@@ -99,24 +99,30 @@ body{
 }
 
 .play-button>div{
-    width:60px;
-    height:100%;
-    margin:auto;
+    width: 88px;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+input[type='file']{
+    margin-top:10px;
 }
 
 button{
     background-color: transparent;
     border:none;
     outline:none;
-    text-align: center;
-    width:100%;
+    display: flex;
+    align-items: center;
     margin:auto;
     height:auto;
     margin-top:10px;
+    cursor: pointer;
 }
 
 canvas{
-    margin-top:-110px;
+    margin-top:-114px;
     width:100%;
 }
 
@@ -126,6 +132,55 @@ input:not([type="range"]):not([type="color"]) {
 
 /* ----- swiper css ----- */
 
-audio {
+/* audio {
     display:none;
+} */
+
+
+@media screen and (max-width: 1024px){
+    .year{
+        font-size: 1.3rem;
+        width: 82px;
+        margin: 15px 0px 20px 0px;
+    }
+
+    .name>h4{
+        margin-block-start: 0.33em;
+    }
+    .discription {
+        padding-inline-start: 15px;
+        font-size: 0.53rem;
+    }
+    .content>p:nth-child(1) {
+        font-size: 1.5rem;
+        line-height: 1.7rem;
+    }
+    .content>p:nth-child(2) {
+        font-size: 0.8rem;
+    }
+    .bullet-points{
+        padding-inline-start: 15px;
+        font-size: 0.7rem;
+    }
+    canvas{
+        margin-top: -53px;
+        height: 136px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .child-div{
+        width: 41%;
+    }
+    button{
+        width:74%;
+        margin-top: 8px;
+        margin-left: 11px;
+    }
+}
+
+@media screen and (max-width: 365px){
+    .child-div{
+        width:100%;
+    }
 }
