@@ -94,8 +94,8 @@ body{
 
 .play-button{
     height:46px;
-    background-color: rgb(162, 156, 156);
-    /* opacity:0.3; */
+    /* background-color: rgb(162, 156, 156);
+    opacity:0.3; */
 }
 
 .play-button>div{
@@ -111,13 +111,14 @@ input[type='file']{
 
 button{
     background-color: transparent;
-    border:none;
+    border: 1px solid white;
+    padding: 9px;
+    border-radius: 50%;
     outline:none;
     display: flex;
     align-items: center;
     margin:auto;
     height:auto;
-    margin-top:10px;
     cursor: pointer;
 }
 
@@ -173,9 +174,7 @@ input:not([type="range"]):not([type="color"]) {
         width: 41%;
     }
     button{
-        width:74%;
-        margin-top: 8px;
-        margin-left: 11px;
+            width: 49%;
     }
 }
 

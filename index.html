@@ -12,7 +12,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Swiper-slider CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.6/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.3.0/swiper-bundle.min.css" />
 
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,11 +57,10 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="visualizer"></div>
-                            <div class="play-button">
-                                <div>
-                                </div>
+                            <div class="visualizer">
+                                <canvas id="canvas"></canvas>
                             </div>
+                            
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -94,18 +93,18 @@
                                 </div>
                             </div>
                             <div class="visualizer">
-                                <canvas id="canvas1"></canvas>
+                                <canvas id="canvas3"></canvas>
                             </div>
                             <div class="play-button">
                                 <div>
-                                    <button id="bttn"><svg style="color: white; pointer-events: none;" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16"> <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" fill="white"></path> </svg>
+                                   
+                                    <button id="audioplaybtn"><svg style="color: white" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16"> <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" fill="white"></path> </svg>
                                     </button>
-                                    <audio id="audio1" src="./audio.mp3">
+                                    <audio id="audio3" src="audio.mp3" controls >
                                 </div>
                             </div>
                         </div>
                     </div>
-                   
                 </div>
             </div>
             
@@ -113,15 +112,29 @@
     </div>
     <!-- javascript files -->
                 
+              
+
+    <!-- Swiper-slider -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8.3.0/swiper-bundle.min.js"></script>
+
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
-        AOS.init();
+        const swiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            // direction: 'vertical',
+            loop: false,
+            autoPlay:true,
+            spaceBetween: 0,
+            grabCursor:true,
+            reverseDirection: false
+        });
     </script>
 
-    <!-- Swiper-slider -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.6/swiper-bundle.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <!-- index.js -->
     <script src="./index.js"></script>

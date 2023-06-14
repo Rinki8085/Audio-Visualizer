@@ -1,30 +1,52 @@
-var audio = document.getElementById("audio1");
-var fileBtn = document.getElementById("bttn");
+// const swiper = new Swiper('.swiper-container', {
+//     // Optional parameters
+//     // direction: 'vertical',
+//     loop: true,
+//     spaceBetween: 0,
+//   });
 
-fileBtn.addEventListener("click", function() {
 
-  if (audio.paused === true) {
+window.onload = function() {
+  
+  var file = document.getElementById("thefile3");
+  var audio = document.getElementById("audio3");
+  var playbtn = document.getElementById("audioplaybtn");
+  
+  playbtn.onclick = function() {
+    //var files = file.files;
+  //var xaudo = document.getElementById("audio3").src;
+
+  //console.log('files---'+URL.createObjectURL(files[0]));
+  console.log('audio---'+audio.files);
+  //audio.crossOrigin = 'anonymous';
+    //audio.src = xaudo;
+   //audio.src = URL.createObjectURL(files[0]);
+    //document.getElementById("thefile3").style.display = "none";
     audio.load();
     audio.play();
     var context = new AudioContext();
     var src = context.createMediaElementSource(audio);
+  console.log('src---'+src);
     var analyser = context.createAnalyser();
-    var canvas = document.getElementById("canvas1");
+console.log('analyser---'+analyser);
+    var canvas = document.getElementById("canvas3");
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     var ctx = canvas.getContext("2d");
-    console.log(ctx)
+
     src.connect(analyser);
     analyser.connect(context.destination);
 
     analyser.fftSize = 256;
 
     var bufferLength = analyser.frequencyBinCount;
+
     var dataArray = new Uint8Array(bufferLength);
+
     var WIDTH = canvas.width;
     var HEIGHT = canvas.height;
-    var barWidth = (WIDTH / bufferLength) * 2.5;
 
+    var barWidth = (WIDTH / bufferLength) * 2.5;
     var barHeight;
     var x = 0;
 
@@ -34,7 +56,8 @@ fileBtn.addEventListener("click", function() {
       x = 0;
 
       analyser.getByteFrequencyData(dataArray);
-      ctx.fillStyle = "#000";
+
+      ctx.fillStyle = "#2f104b";
       ctx.fillRect(0, 0, WIDTH, HEIGHT);
 
       for (var i = 0; i < bufferLength; i++) {
@@ -51,21 +74,9 @@ fileBtn.addEventListener("click", function() {
       }
     }
 
-    // audio.play();
+    audio.play();
     renderFrame();
-  } else {
-    audio.pause();
-  }
+  };
+};
 
-    
-})
 
-const swiper = new Swiper('.swiper-container', {
-
-  effect:"slide",
-  speed:1000,
-  loop: true,
-  autoPlay:true,
-  spaceBetween: 0,
-  grabCursor:true
-});
