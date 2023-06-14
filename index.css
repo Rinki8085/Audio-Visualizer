@@ -133,9 +133,9 @@ input:not([type="range"]):not([type="color"]) {
 
 /* ----- swiper css ----- */
 
-/* audio {
+audio {
     display:none;
-} */
+} 
 
 
 @media screen and (max-width: 1024px){
@@ -171,15 +171,51 @@ input:not([type="range"]):not([type="color"]) {
 
 @media screen and (max-width: 768px) {
     .child-div{
-        width: 41%;
+        width: 100%;
     }
     button{
             width: 49%;
     }
+    .content-section {
+        padding: 51px 55px 0px 55px;
+    }
+    .visualizer {
+		height: 161px;
+	}
 }
 
-@media screen and (max-width: 365px){
+@media screen and (max-width: 425px){
     .child-div{
         width:100%;
+        height:100vh;
+    }
+	.visualizer {
+		height: 101px;
+	}
+
+	canvas {
+		margin-top: -41px;
+	}
+
+    .discription {
+        color:white;
+        font-size: 0.75rem;
+    }
+    /* ------------ */
+    .content-section {
+        padding: 25px 25px 0px 25px;
+    }
+    
+    .content>p:nth-child(1) {
+        font-size: 1.5rem;
+        line-height: 1.7rem;
+    }
+    
+    .content>p:nth-child(2) {
+        font-size: 1rem;
+    }
+    
+    .bullet-points {
+        font-size: 0.8rem;
     }
 }
